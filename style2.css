@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    height: 100vh;
+    width: 90%;
+    grid-gap: 10px;
+    margin: 0 auto;
+    grid: 1fr 2fr 1fr / repeat(4,1fr);/*filas/columnas*/    
+    grid-template-areas: 
+    "header header header ."
+    "main main main menu-lateral"
+    "footer footer footer menu-lateral"    ;
+    /*para dejar un campo vacio se pune un punto .*/
+}
+[class^='item']{
+    color: #fff;
+}
+.container > *{
+    color: #ffffff;
+    font-size: 20px;
+}
+header{
+    background: #d44b0b;
+    grid-area: header;
+}
+main{
+    background: #02237e;
+    grid-area: main;
+}
+aside{
+    background: #47018a;
+    grid-area: menu-lateral;
+}
+footer{
+    background: #940909;
+    grid-area: footer;
+}
+
+@media (max-width:600px ){ 
+  .container{
+    grid: 1fr 1fr 1fr / repeat(3,1fr);
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer"
+    ;
+  }
+  aside{
+    display: none;
+  }
+}

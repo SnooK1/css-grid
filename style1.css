@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    height: 600px;
+    width: 800px;
+    background:blue ;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 10px;    
+    grid-auto-flow: column;/*los acomada por columna por defecto es row*/
+    /*grid-auto-columns: 100px;/*sirve cuando se desvorda se le pone ese ancho */
+    /*grid-auto-rows: 100px;/*sirve cuando se desvorda se le pone ese ancho */
+    grid-auto-flow: dense;
+}
+[class^="item"]{ /**todas que empiesen con item**/
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+.item1, .item8{
+background: red;
+}
+.item2,.item7{
+    background: pink;
+}
+.item3,.item6{
+    background: yellow;
+}

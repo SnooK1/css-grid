@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    height: 600px;
+    width: 90%;
+    margin: 0 auto;
+    background: pink;
+    grid-gap: 10px;
+    /* grid-template-columns: repeat(3,minmax(100px,200px)); */
+    /*grid-template-columns: repeat(auto-fill,100px);/* crea tanto elemento asu medidad y del contenedor*/
+    /*grid-template-columns: repeat(auto-fit,minmax(100px,1fr));/*los ajusta para que no haiga espacios*/
+
+}
+[class^='item']{
+    color: blue;
+    font-size: 30px;
+    text-align: center;
+}
